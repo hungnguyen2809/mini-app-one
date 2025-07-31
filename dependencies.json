@@ -1,0 +1,30 @@
+{
+  "react": {
+    "name": "react",
+    "version": "19.1.0"
+  },
+  "react-native": {
+    "name": "react-native",
+    "version": "0.80.2"
+  },
+  "@react-navigation/bottom-tabs": {
+    "name": "@react-navigation/bottom-tabs",
+    "version": "7.4.4"
+  },
+  "@react-navigation/native": {
+    "name": "@react-navigation/native",
+    "version": "7.1.16"
+  },
+  "@react-navigation/native-stack": {
+    "name": "@react-navigation/native-stack",
+    "version": "7.3.23"
+  },
+  "react-native-safe-area-context": {
+    "name": "react-native-safe-area-context",
+    "version": "5.5.2"
+  },
+  "react-native-screens": {
+    "name": "react-native-screens",
+    "version": "4.13.1"
+  }
+}
