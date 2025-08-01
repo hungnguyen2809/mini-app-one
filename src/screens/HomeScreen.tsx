@@ -5,6 +5,8 @@ const HomeScreen: React.FC = () => {
   return (
     <View style={styles.container}>
       <Text>HomeScreen</Text>
+      <Text>Mini App</Text>
+      
     </View>
   );
 };

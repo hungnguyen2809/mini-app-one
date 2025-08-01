@@ -7,6 +7,8 @@ import getSharedDependencies from './shared-deps.js';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+const STANDALONE = Boolean(process.env.STANDALONE);
+
 /**
  * Rspack configuration enhanced with Re.Pack defaults for React Native.
  *
@@ -33,7 +35,7 @@ export default env => {
     module: {
       rules: [
         ...Repack.getJsTransformRules(),
-        ...Repack.getAssetTransformRules({ inline: true }),
+        ...Repack.getAssetTransformRules({ inline: !STANDALONE }),
       ],
     },
     plugins: [
@@ -45,7 +47,7 @@ export default env => {
         exposes: {
           './App': './src/navigation/MainNavigator',
         },
-        shared: getSharedDependencies({ eager: false }),
+        shared: getSharedDependencies({ eager: STANDALONE }),
       }),
       // silence missing @react-native-masked-view optionally required by @react-navigation/elements
       new rspack.IgnorePlugin({

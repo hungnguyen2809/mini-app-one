@@ -5,6 +5,7 @@ const SettingScreen: React.FC = () => {
   return (
     <View style={styles.container}>
       <Text>SettingScreen</Text>
+      <Text>Mini App</Text>
     </View>
   );
 };
